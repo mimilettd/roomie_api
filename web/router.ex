@@ -19,6 +19,8 @@ defmodule RoomieApi.Router do
     get "/users/:id", UserController, :show
   end
 
+  resources "/sessions", SessionController, only: [:create]
+
   # Other scopes may use custom stacks.
   # scope "/api", RoomieApi do
   #   pipe_through :api
